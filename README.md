@@ -7,5 +7,5 @@ Set the variables required by the module in `main.tf`
 ## Run 
 ```
 terraform get
-terraform apply
+terraform apply --var-file=variables.txt
 ```
