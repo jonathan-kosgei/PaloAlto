@@ -1,4 +1,10 @@
 
+resource "aws_eip" "" {
+  vpc                       = true
+  network_interface         = "${aws_network_interface.PaloAltoPublicInterface.id}"
+}
+
+
 resource "aws_network_interface" "PaloAltoPublicInterface" {
   subnet_id       = "${var.public_subnet}"
   private_ips     = ["10.0.1.20"]
